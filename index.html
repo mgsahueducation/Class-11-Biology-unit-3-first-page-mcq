@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Unit 3 · Cell Structure & Functions · MCQs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #f2f7fc;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .mcq-container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px -10px rgba(0, 20, 30, 0.2);
+            padding: 2rem 2rem 2.5rem;
+            border: 1px solid #d9e6f2;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0b3b5c;
+            border-left: 8px solid #2a8c9b;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .subhead {
+            color: #2e5e7e;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            font-weight: 400;
+            border-bottom: 1px dashed #b8d0e0;
+            padding-bottom: 0.75rem;
+        }
+        .unit-badge {
+            display: inline-block;
+            background: #e2f0f5;
+            color: #0f5b6b;
+            border-radius: 40px;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-left: 1.5rem;
+            vertical-align: middle;
+        }
+        .question-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid #cde0ea;
+            transition: all 0.15s ease;
+            box-shadow: 0 2px 6px rgba(0, 30, 40, 0.02);
+        }
+        .question-card:hover {
+            border-color: #7fb6c7;
+            box-shadow: 0 8px 18px -8px rgba(20, 100, 120, 0.18);
+        }
+        .q-num {
+            display: inline-block;
+            background: #0b3b5c;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+        .q-text {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #0e2e42;
+            margin-bottom: 1.3rem;
+            line-height: 1.5;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            margin-bottom: 0.4rem;
+        }
+        .option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            background: #f9fcff;
+            padding: 0.7rem 1rem;
+            border-radius: 50px;
+            border: 1px solid #d3e4ee;
+            font-size: 1rem;
+            color: #1a3f55;
+            line-height: 1.4;
+            transition: background 0.1s;
+            cursor: default;
+        }
+        .option:hover {
+            background: #e9f3f8;
+        }
+        .opt-letter {
+            display: inline-block;
+            background: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #0e5a70;
+            border: 1px solid #aac7d7;
+            flex-shrink: 0;
+            margin-top: 0.05rem;
+        }
+        .correct-marker {
+            background: #c2f0d6;
+            border: 1px solid #2b9e6b;
+            color: #0b4d2e;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            margin-left: auto;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+        }
+        .answer-key {
+            margin-top: 2.5rem;
+            background: #e6f2f7;
+            border-radius: 18px;
+            padding: 1.5rem 1.8rem;
+            border-left: 6px solid #2a8c9b;
+        }
+        .answer-key h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0b3b5c;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .key-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            font-size: 1rem;
+            color: #114e62;
+        }
+        .key-item {
+            background: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            border: 1px solid #bad4e2;
+            font-weight: 500;
+            min-width: 100px;
+            text-align: center;
+        }
+        .key-item span {
+            font-weight: 700;
+            color: #0b3b5c;
+            margin-right: 0.35rem;
+        }
+        .footer-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #5e7e91;
+            text-align: center;
+            border-top: 1px solid #c7dae6;
+            padding-top: 1.4rem;
+            letter-spacing: 0.2px;
+        }
+        .footer-note strong {
+            color: #1c6a7a;
+        }
+        @media (max-width: 600px) {
+            .mcq-container { padding: 1.3rem; }
+            h1 { font-size: 1.5rem; }
+            .q-text { font-size: 1rem; }
+            .option { font-size: 0.9rem; padding: 0.6rem 0.8rem; }
+            .correct-marker { display: none; } /* hide on very small screens, key below shows answers */
+        }
+    </style>
+</head>
+<body>
+<div class="mcq-container">
+    <h1>Cell: Structure & Functions <span class="unit-badge">UNIT 3</span></h1>
+    <div class="subhead">MCQs based on NEET previous years · Chapter 8, 9 & 10</div>
 
+    <!-- Q1 — Cell Theory / Unit 3 intro -->
+    <div class="question-card">
+        <div class="q-num">Q1</div>
+        <div class="q-text">The cell theory emphasised the unity underlying the diversity of life forms. Who first proposed the concept “Omnis cellula-e cellula”?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Schleiden and Schwann <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Rudolf Virchow <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">C</span> Robert Hooke <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Antonie van Leeuwenhoek <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q2 — Biomolecules (Chapter 9) -->
+    <div class="question-card">
+        <div class="q-num">Q2</div>
+        <div class="q-text">Lecithin, a small molecular weight organic compound found in living tissues, is an example of:</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Carbohydrate <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Protein <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Lipid <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">D</span> Nucleic acid <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q3 — Cell Cycle & Cell Division (Chapter 10) — Metaphase / spindle -->
+    <div class="question-card">
+        <div class="q-num">Q3</div>
+        <div class="q-text">Spindle fibres attach to kinetochores of chromosomes during which phase of mitosis?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Telophase <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Anaphase <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Metaphase <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">D</span> Prophase <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q4 — Cell: The Unit of Life (Chapter 8) — Cell theory / reductionist biology -->
+    <div class="question-card">
+        <div class="q-num">Q4</div>
+        <div class="q-text">The physico-chemical approach to study living organisms using cell-free systems is called:</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Reductionist Biology <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">B</span> Systems Biology <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Evolutionary Biology <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Molecular phylogeny <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q5 — Cell Cycle & Cell Division — which never occurs in mitosis -->
+    <div class="question-card">
+        <div class="q-num">Q5</div>
+        <div class="q-text">Which one of the following never occurs during mitotic cell division?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Cytokinesis <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Crossing over <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">C</span> Separation of sister chromatids <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Formation of metaphase plate <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q6 — Biomolecules — typical fat molecule -->
+    <div class="question-card">
+        <div class="q-num">Q6</div>
+        <div class="q-text">A typical fat molecule is made up of:</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> One glycerol and three fatty acids <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">B</span> One glycerol and two fatty acids <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Three glycerol and one fatty acid <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Three glycerol and three fatty acids <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q7 — Cell: The Unit of Life — transport pathway -->
+    <div class="question-card">
+        <div class="q-num">Q7</div>
+        <div class="q-text">Which one of the following structures between two adjacent cells is an effective transport pathway?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Plasmodesmata <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">B</span> Tight junctions <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Desmosomes <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Gap junctions (animal cells only) <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q8 — Cell Cycle — cytokinesis / telophase (based on unit text) -->
+    <div class="question-card">
+        <div class="q-num">Q8</div>
+        <div class="q-text">In plant cells, cytokinesis occurs by:</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Cleavage furrow formation <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Cell plate formation <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">C</span> Fragmentation <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Budding <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q9 — Biomolecules / enzymes (from chapter 9 reference) -->
+    <div class="question-card">
+        <div class="q-num">Q9</div>
+        <div class="q-text">Which of the following is a cofactor that is tightly bound to the apoenzyme?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Prosthetic group <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">B</span> Coenzyme <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Metal ion (loosely bound) <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Substrate <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q10 — Cell Cycle — anaphase / movement -->
+    <div class="question-card">
+        <div class="q-num">Q10</div>
+        <div class="q-text">During which phase of mitosis do sister chromatids separate and move to opposite poles?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Metaphase <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Anaphase <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">C</span> Telophase <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Prophase <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q11 — Cell: The Unit of Life — prokaryotic vs eukaryotic (from material) -->
+    <div class="question-card">
+        <div class="q-num">Q11</div>
+        <div class="q-text">Which of the following is NOT a characteristic of prokaryotic cells?</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Presence of a well-defined nucleus <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">B</span> 70S ribosomes <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Single circular DNA <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">D</span> Mesosomes <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Q12 — Biomolecules — proteins / amino acids -->
+    <div class="question-card">
+        <div class="q-num">Q12</div>
+        <div class="q-text">The zwitterionic form of an amino acid is most prevalent at:</div>
+        <div class="options">
+            <div class="option"><span class="opt-letter">A</span> Acidic pH <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">B</span> Basic pH <span class="correct-marker">✗</span></div>
+            <div class="option"><span class="opt-letter">C</span> Isoelectric point <span class="correct-marker">✓</span></div>
+            <div class="option"><span class="opt-letter">D</span> Neutral pH only <span class="correct-marker">✗</span></div>
+        </div>
+    </div>
+
+    <!-- Answer key -->
+    <div class="answer-key">
+        <h3>📋 Answer Key</h3>
+        <div class="key-grid">
+            <div class="key-item"><span>Q1</span> B</div>
+            <div class="key-item"><span>Q2</span> C</div>
+            <div class="key-item"><span>Q3</span> C</div>
+            <div class="key-item"><span>Q4</span> A</div>
+            <div class="key-item"><span>Q5</span> B</div>
+            <div class="key-item"><span>Q6</span> A</div>
+            <div class="key-item"><span>Q7</span> A</div>
+            <div class="key-item"><span>Q8</span> B</div>
+            <div class="key-item"><span>Q9</span> A</div>
+            <div class="key-item"><span>Q10</span> B</div>
+            <div class="key-item"><span>Q11</span> A</div>
+            <div class="key-item"><span>Q12</span> C</div>
+        </div>
+    </div>
+    <div class="footer-note">
+        <strong>Unit 3 · Cell: Structure and Functions</strong> — Chapter 8, 9, 10 · NEET previous years & concept based
+    </div>
+</div>
+</body>
+</html>
